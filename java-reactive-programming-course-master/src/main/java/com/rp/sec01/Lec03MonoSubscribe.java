@@ -16,6 +16,11 @@ public class Lec03MonoSubscribe {
         // mono.subscribe();
 
         // 2
+        /*
+        Within the subscribe if we don't define doOnNext() , doOnError() , doOnCompletion()
+        within the subscribe then in that case if exception comes
+        then it will throw a nasty exception as we have not handled in the pipeline.
+         */
         mono.subscribe(
                 Util.onNext(),
                 Util.onError(),
