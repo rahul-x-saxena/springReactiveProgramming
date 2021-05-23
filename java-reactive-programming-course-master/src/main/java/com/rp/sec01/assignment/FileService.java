@@ -9,6 +9,12 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class FileService {
+/*
+Files.writeString does not work as it is introduces in java 11
+Files.readString does not work as it is introduces in java 11
+Hence commented the whole class
+ */
+
 
     private static final Path PATH = Paths.get("src/main/resources/assignment/sec01");
 

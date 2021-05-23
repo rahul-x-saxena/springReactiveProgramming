@@ -7,13 +7,16 @@ public class Lec08MonoFromRunnable {
 
     public static void main(String[] args) {
 
+/*
+There may be some time consuming operations and you want to be get notified when the operation is completed.
+ */
 
         Mono.fromRunnable(timeConsumingProcess())
-                .subscribe(Util.onNext(),
-                        Util.onError(),
-                        () -> {
-                            System.out.println("process is done. Sending emails...");
-                        });
+            .subscribe(Util.onNext(),
+                Util.onError(),
+                () -> {
+                    System.out.println("process is done. Sending emails...");
+                });
 
 
     }
