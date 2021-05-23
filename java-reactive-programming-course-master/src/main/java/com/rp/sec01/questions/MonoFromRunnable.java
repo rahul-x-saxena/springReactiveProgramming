@@ -16,6 +16,10 @@ public class MonoFromRunnable {
     }
 
     public static void main(String[] args) {
+/*
+log() to know what are Subscriber methods called in case of different
+Mono publishers
+ */
         MonoFromRunnable.get()
                 .log()
                 .subscribe(new DefaultSubscriber());
